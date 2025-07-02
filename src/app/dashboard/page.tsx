@@ -206,7 +206,7 @@ export default function DashboardPage() {
                       {analysis.title}
                     </Typography>
                     <Typography variant="body2" color="textSecondary" gutterBottom>
-                      {new Date(analysis.created_at).toLocaleDateString()}
+                      {analysis.created_at ? new Date(analysis.created_at).toLocaleDateString() : 'Unknown date'}
                     </Typography>
                     <Box display="flex" gap={1} mb={2}>
                       {analysis.platforms.map((platform) => (

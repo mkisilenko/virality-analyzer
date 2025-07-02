@@ -81,7 +81,7 @@ function SetupInstructions() {
           Welcome to Virality Analyzer! 🚀
         </Typography>
         <Typography variant="h6" color="textSecondary" gutterBottom>
-          Let's get you set up in just a few minutes
+          Let&apos;s get you set up in just a few minutes
         </Typography>
       </Box>
 
@@ -170,14 +170,14 @@ function SetupInstructions() {
 export default function HomePage() {
   const router = useRouter()
   const theme = useTheme()
+  
+  // Always call hooks at the top level
+  const { user } = useAuth()
 
   // If environment is not configured, show setup instructions
   if (!isConfigured()) {
     return <SetupInstructions />
   }
-
-  // If configured, try to use auth hook
-  const { user } = useAuth()
 
   const handleGetStarted = () => {
     if (user) {
@@ -200,7 +200,7 @@ export default function HomePage() {
       >
         <Container maxWidth="lg">
           <Typography variant="h2" component="h1" gutterBottom fontWeight="bold">
-            Predict Your Content's Viral Potential
+            Predict Your Content&apos;s Viral Potential
           </Typography>
           <Typography variant="h5" sx={{ mb: 4, opacity: 0.9 }}>
             AI-powered social media analysis that helps you create content that goes viral
