@@ -3,7 +3,6 @@ import { createClient } from '@/lib/supabase/client'
 import { Database } from '@/types/database'
 
 type Analysis = Database['public']['Tables']['analyses']['Row']
-type AnalysisInsert = Database['public']['Tables']['analyses']['Insert']
 type PlatformInsight = Database['public']['Tables']['platform_insights']['Row']
 
 export interface AnalysisWithInsights extends Analysis {
